@@ -21,8 +21,8 @@ def get_unique_job_types(path):
     job_types = []
 
     for job in job_list:
-        if job.type not in job_list:
-            job_types.append(job.type)
+        if job["type"] not in job_list:
+            job_types.append(job["type"])
 
     return job_types
 
@@ -65,8 +65,8 @@ def get_unique_industries(path):
     job_industries = []
 
     for job in job_list:
-        if job.industry not in job_industries:
-            job_industries.append(job.industry)
+        if job["industry"] not in job_industries:
+            job_industries.append(job["industry"])
 
     return job_industries
 
