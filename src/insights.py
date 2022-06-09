@@ -1,4 +1,4 @@
-from jobs import read
+from src.jobs import read
 
 
 def get_unique_job_types(path):
@@ -133,7 +133,18 @@ def get_min_salary(path):
     int
         The minimum salary paid out of all job opportunities
     """
-    pass
+    job_list = read(path)
+
+    salaries = []
+
+    for job in job_list:
+        try:
+            salary = int(job["min_salary"])
+            salaries.append(salary)
+        except (ValueError):
+            print("Erro: o valor não é um inteiro.")
+
+    return min(salaries)
 
 
 def matches_salary_range(job, salary):
