@@ -65,8 +65,10 @@ def get_unique_industries(path):
     job_industries = []
 
     for job in job_list:
-        if job["industry"] not in job_industries:
+        if job['industry'] and job['industry'] not in job_industries:
             job_industries.append(job["industry"])
+
+    print(job_industries)
 
     return job_industries
 
@@ -189,4 +191,3 @@ def filter_by_salary_range(jobs, salary):
         Jobs whose salary range contains `salary`
     """
     return []
-
