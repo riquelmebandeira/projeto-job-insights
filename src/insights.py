@@ -21,8 +21,8 @@ def get_unique_job_types(path):
     job_types = []
 
     for job in job_list:
-        if job["type"] not in job_list:
-            job_types.append(job["type"])
+        if job["job_type"] not in job_types:
+            job_types.append(job["job_type"])
 
     return job_types
 
@@ -113,7 +113,7 @@ def get_max_salary(path):
             salary = int(job["max_salary"])
             salaries.append(salary)
         except (ValueError):
-            print("Erro: o valor não é um inteiro.")
+            pass
 
     return max(salaries)
 
@@ -142,7 +142,7 @@ def get_min_salary(path):
             salary = int(job["min_salary"])
             salaries.append(salary)
         except (ValueError):
-            print("Erro: o valor não é um inteiro.")
+            pass
 
     return min(salaries)
 
@@ -189,3 +189,4 @@ def filter_by_salary_range(jobs, salary):
         Jobs whose salary range contains `salary`
     """
     return []
+
