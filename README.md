@@ -1,4 +1,4 @@
-# Projeto Jobs Insight
+# Projeto Job Insights
 
 # Contexto
 O Jobs Insight é uma simples aplicação Web que provê informações sobre empregos.
